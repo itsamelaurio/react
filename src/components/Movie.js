@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Movie() {
+export default function Movie(props) {
     return (
-        <div>
+        <li className="list-group-item">
+            { props.item.title }
             
-        </div>
+            <button className="btn btn-sm btn-danger float-end">Ta Bort</button>
+        </li>
     )
 }
