@@ -36,7 +36,6 @@ export default function MovieForm(props) {
                         <option value={4}>4</option>
                         <option value={5}>5</option>
                     </select>
-                    <input type="submit" className="btn btn-success mt-3" defaultValue="Spara film"></input>
                 </fieldset>
             </form>
     )

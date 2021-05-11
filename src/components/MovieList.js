@@ -32,7 +32,8 @@ export default function MovieList() {
 
     return (
         <div>
-            <MovieForm addMovie={addMovie}/> 
+            <MovieForm addMovie={addMovie}/>
+            <SaveButton/>
             <ul className="list-group">
                 {movies.map((movie) => (<Movie key={movie.id} movie={movie} deleteMovie={deleteMovie} />))}
             </ul>           
