@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Movie(props) {
     let [stars, setStars] = React.useState("");
-
+    
+    //Lägger till stjärnorna till filmen varje gång det skapas en ny
     React.useEffect(()=>{
         let star = []
         for(let i = 0; i < props.movie.rating;i++){

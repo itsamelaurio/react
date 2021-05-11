@@ -5,6 +5,7 @@ export default function MovieForm(props) {
     const [title, setTitle] = React.useState("");
     const [rating, setRating] = React.useState(0);
 
+    //Validation för formuläret, sen skickas det iväg och lägger till en film
     function checkForm (e){
         e.preventDefault();
 

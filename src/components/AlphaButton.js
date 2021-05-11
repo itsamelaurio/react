@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function AlphaButton(props) {
+    
+    //Sorterar filmerna på titel i alfabetisk ordning och sätter sen den gamla filmlistan till den sorterade
     function sort(movies){
         if (movies.length <= 1){
             alert("Lägg till två filmer för att kunna sortera dem")
@@ -15,6 +17,8 @@ export default function AlphaButton(props) {
         }
     }
     return (
-        <button className="btn btn-warning mt-3" onClick={() => sort(props.movies)}>Sortera Alfabetiskt</button>
-    )
+        <div className="margin-sm text-center margin-bottom-sm">
+            <button className="btn btn-warning mt-3" onClick={() => sort(props.movies)}>Sortera Alfabetiskt</button>
+        </div>
+        )
 }

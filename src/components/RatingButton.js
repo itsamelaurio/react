@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function RatingButton(props) {
+    
+    //Sorterar filmerna på betyg i omvänd ordning och sätter sen den gamla filmlistan till den sorterade
     function sort(movies){
         if (movies.length <= 1){
             alert("Lägg till två filmer för att kunna sortera dem")
@@ -15,6 +17,8 @@ export default function RatingButton(props) {
         }
     }
     return (
-        <button className="btn btn-warning mt-3" onClick={() => sort(props.movies)}>Sortera på Betyg</button>
-    )
+        <div className="text-center">
+            <button className="btn btn-warning mt-3 " style = {{margin:"auto"}}onClick={() => sort(props.movies)}>Sortera på Betyg</button>
+        </div>
+        )
 }
