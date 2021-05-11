@@ -26,11 +26,15 @@ export default function MovieList() {
         }])
     }
 
+    function deleteMovie(id){
+        setMovies(movies.filter((movie) => movie.id !== id));
+    }
+
     return (
         <div>
             <MovieForm addMovie={addMovie}/> 
             <ul className="list-group">
-                {movies.map((movie) => (<Movie key={movie.id} item={movie} />))}
+                {movies.map((movie) => (<Movie key={movie.id} movie={movie} deleteMovie={deleteMovie} />))}
             </ul>           
         </div>
     )
