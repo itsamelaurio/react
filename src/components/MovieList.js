@@ -37,7 +37,8 @@ export default function MovieList() {
             <ul className="list-group">
                 {movies.map((movie) => (<Movie key={movie.id} movie={movie} deleteMovie={deleteMovie} />))}
             </ul>
-            <AlphaButton setMovies = {setMovies} movies = {movies}/>          
+            <AlphaButton setMovies = {setMovies} movies = {movies}/>
+            <RatingButton setMovies = {setMovies} movies = {movies}/>          
         </div>
     )
 }

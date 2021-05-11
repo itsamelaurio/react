@@ -6,7 +6,7 @@ export default function Movie(props) {
     React.useEffect(()=>{
         let star = []
         for(let i = 0; i < props.movie.rating;i++){
-           star.push(<i className="fa fa-star checked" style={{color: "orange"}} key={i}></i>);
+           star.push(<i className="fa fa-star checked" style={{color: "orange"}} key={"a"+i}></i>);
         }
         setStars(star);
         
