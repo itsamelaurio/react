@@ -8,7 +8,7 @@ import RatingButton from './RatingButton';
 export default function MovieList() {
     return (
         <div>
-            
+            <MovieForm/>
             
         </div>
     )
