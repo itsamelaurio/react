@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MovieForm() {
+export default function MovieForm(props) {
 
     const [title, setTitle] = React.useState("");
     const [rating, setRating] = React.useState(0);
@@ -13,10 +13,11 @@ export default function MovieForm() {
         }else if(parseInt(rating,10) === 0){
             alert("Lägg till ett betyg");
         }else{
+            props.addMovie(title,rating);
             setTitle("");
             setRating(0);
             document.getElementById("add-movie").reset();
-            alert("Success");
+            
         }
     }
 

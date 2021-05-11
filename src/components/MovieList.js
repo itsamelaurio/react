@@ -17,9 +17,18 @@ export default function MovieList() {
         rating: 3 
     }]);
 
+    function addMovie(title,rating){
+        const id = movies.length > 0 ? movies[movies.length - 1].id + 1 : 0;
+        setMovies([...movies, {
+            id: id,
+            title: title,
+            rating: rating
+        }])
+    }
+
     return (
         <div>
-            <MovieForm/> 
+            <MovieForm addMovie={addMovie}/> 
             <ul className="list-group">
                 {movies.map((movie) => (<Movie key={movie.id} item={movie} />))}
             </ul>           
